@@ -39,14 +39,19 @@ app.get('/', (req, res) => {
 });
 
 app.get('/about', (req, res) => {
-  //res.send('<h1>Hello Express!</h1>');
   res.render('about.hbs', {
     pageTitle: 'About Page'
   });
 });
 
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects'
+  });
+});
+
+// /bad - send
 app.get('/bad', (req, res) => {
-  //res.send('<h1>Hello Express!</h1>');
   res.send({
     errorMessage: 'Bad Hombre'
   });
